@@ -164,6 +164,12 @@ extern int    amodem_add_inbound_call( AModem  modem, const char*  number );
 extern int    amodem_update_call( AModem  modem, const char*  number, ACallState  state );
 extern int    amodem_disconnect_call( AModem  modem, const char*  number );
 
+/** SIM EF handling
+ **/
+
+extern const char* amodem_get_sim_ef ( AModem modem, int fileid, int record );
+extern const char* amodem_set_sim_ef ( AModem modem, int fileid, int record, const char* data );
+
 /**/
 
 #endif /* _android_modem_h_ */
